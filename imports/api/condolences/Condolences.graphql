@@ -1,0 +1,10 @@
+type Condolence {
+    _id: String!
+    name: String!
+    completed: Boolean
+}
+
+extend type Mutation {
+    createCondolence(name: String!, bookId: String!): Condolence
+    toggleCondolence(_id: String!): Condolence
+}

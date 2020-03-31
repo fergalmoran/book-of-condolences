@@ -1,0 +1,12 @@
+type Book {
+    _id: String!
+    name: String!
+    condolences: [Condolence]
+    completed: Boolean
+}
+type Mutation {
+    createBook(name: String!): Book
+}
+extend type Query {
+    books: [Book]
+}
